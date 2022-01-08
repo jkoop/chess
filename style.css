@@ -1,0 +1,67 @@
+table {
+    line-height: 0;
+    background: white;
+    font-size: 88%;
+    border: 1px solid #c8ccd1;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+}
+tr {
+    vertical-align: middle;
+}
+td {
+    padding: 0;
+    vertical-align: inherit;
+    width: 48px;
+    height: 48px;
+}
+img {
+    width: 48px;
+}
+td:first-of-type,
+td:last-of-type {
+    width: 18px;
+}
+tr:first-of-type td,
+tr:last-of-type td {
+    height: 18px;
+}
+tr:first-of-type td,
+tr:last-of-type td,
+td:first-of-type,
+td:last-of-type {
+    background-color: initial !important;
+}
+td {
+    background-color: #ffce9e;
+}
+tr:nth-child(even) td:nth-child(odd),
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: #d18b47;
+}
+td.movable {
+    background-color: #00aaff;
+}
+tr:nth-child(even) td:nth-child(odd).movable,
+tr:nth-child(odd) td:nth-child(even).movable {
+    background-color: #0071aa;
+}
+td.capturable {
+    background-color: #ff0000;
+}
+tr:nth-child(even) td:nth-child(odd).capturable,
+tr:nth-child(odd) td:nth-child(even).capturable {
+    background-color: #dd0000;
+}
+td.blink img {
+    animation: blink 800ms step-start infinite;
+}
+html.libdarkness tr:not(:first-of-type):not(:last-of-type) td:not(:first-of-type):not(:last-of-type) {
+    filter: invert(1);
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
